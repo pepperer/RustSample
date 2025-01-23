@@ -1,5 +1,3 @@
-mod lib;
-
 // use lib::{lsd, test_android};
 use log::*;
 
