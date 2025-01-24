@@ -62,6 +62,10 @@ internal abstract class RustBuildTask : DefaultTask() {
         val cxx = File(toolchainFolder, abi.ccx(apiLevel))
         val ar = File(toolchainFolder, abi.ar(ndkVersion.major))
 
+        println("cc.path = ${cc.path}")
+        println("cxx.path = ${cxx.path}")
+        println("ar.path = ${ar.path}")
+
         val cargoTargetTriplet = abi.rustTargetTriple
             .replace('-', '_')
             .uppercase()
